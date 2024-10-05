@@ -1,3 +1,5 @@
+import './Hero.module.css'
+
 const Hero = () => (
   <section className="hero">
     <h1 className="title">Hey, I'm Jordan</h1>
