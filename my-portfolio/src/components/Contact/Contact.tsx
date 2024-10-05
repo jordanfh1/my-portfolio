@@ -1,7 +1,7 @@
 import styles from './Contact.module.css';
 
 const handleSubmit = () => {
-    
+
 }
 
 const Contact = () => (
@@ -16,10 +16,10 @@ const Contact = () => (
       </form>
       <div className={styles.socialLinks}>
         <a href="https://www.linkedin.com/in/jordan-houghton-2441711ba/" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin">LinkedIn</i>
         </a>
         <a href="https://github.com/jordanfh1" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i>
+          <i className="fab fa-github">GitHub</i>
         </a>
         
       </div>

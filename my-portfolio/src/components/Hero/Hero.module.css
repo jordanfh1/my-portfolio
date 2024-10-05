@@ -65,4 +65,48 @@
       background-position: 10000px 5000px;
     }
   }
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+      color: #ff00ff; /* Starting color */
+    }
+    25% {
+      transform: translateY(-5px); /* Slight upward wave */
+      color: #00ffff; /* Change color */
+    }
+    50% {
+      transform: translateY(5px); /* Slight downward wave */
+      color: #ffcc00; /* Another color */
+    }
+    75% {
+      transform: translateY(-3px); /* Back up a bit */
+      color: #ff6666; /* Color transition */
+    }
+  }
+  
+  @keyframes crazy-colors {
+    0%, 100% {
+      color: #ff00ff; /* Start and end with purple */
+    }
+    25% {
+      color: #00ff00; /* Bright green */
+    }
+    50% {
+      color: #ffcc00; /* Vivid yellow */
+    }
+    75% {
+      color: #ff6666; /* Vibrant red */
+    }
+  }
+  
+  .span {
+    display: inline-block;
+    color: #fff; /* Default white text */
+    transition: transform 0.3s ease; /* Smooth transition for hovering */
+  }
+  
+  .span:hover {
+    animation: wave 1s infinite ease-in-out, crazy-colors 0.5s infinite alternate;
+    cursor: pointer;
+  }
   
