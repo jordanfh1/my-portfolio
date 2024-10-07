@@ -1,8 +1,12 @@
-/* Skills.module.css */
 
 .skills {
     background-color: #1e1e1e;
     color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
   
   .skills h2 {

@@ -1,8 +1,12 @@
-/* Projects.module.css */
 
 .projects {
     background-color: #121212;
     color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
   
   .projects h2 {

@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
     <Hero />
-    <Projects />
-    <Skills />
     <About />
+    <Skills />
+    <Projects />
     <Contact />
     <EasterEgg />
     </>
