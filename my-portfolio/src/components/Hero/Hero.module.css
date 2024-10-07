@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: linear-gradient(135deg, #1f1c2c, #973131);
     text-align: center;
     color: var(--color-text);
     position: relative;
@@ -68,41 +68,41 @@
   @keyframes wave {
     0%, 100% {
       transform: translateY(0);
-      color: #ff00ff; /* Starting color */
+      color: #973131; 
     }
     25% {
-      transform: translateY(-5px); /* Slight upward wave */
-      color: #00ffff; /* Change color */
+      transform: translateY(-5px); 
+      color: #E0A75E; 
     }
     50% {
-      transform: translateY(5px); /* Slight downward wave */
-      color: #ffcc00; /* Another color */
+      transform: translateY(5px); 
+      color: #F9D689; 
     }
     75% {
-      transform: translateY(-3px); /* Back up a bit */
-      color: #ff6666; /* Color transition */
+      transform: translateY(-3px); 
+      color: #F5E7B2; 
     }
   }
   
   @keyframes crazy-colors {
     0%, 100% {
-      color: #ff00ff; /* Start and end with purple */
+      color: #F5E7B2; 
     }
     25% {
-      color: #00ff00; /* Bright green */
+      color: #F9D689; 
     }
     50% {
-      color: #ffcc00; /* Vivid yellow */
+      color: #E0A75E; 
     }
     75% {
-      color: #ff6666; /* Vibrant red */
+      color: #973131; 
     }
   }
   
   .span {
     display: inline-block;
-    color: #fff; /* Default white text */
-    transition: transform 0.3s ease; /* Smooth transition for hovering */
+    color: #fff; 
+    transition: transform 0.3s ease; 
   }
   
   .span:hover {

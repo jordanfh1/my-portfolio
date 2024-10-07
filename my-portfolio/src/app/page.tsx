@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import EasterEgg from "@/components/EasterEgg/EasterEgg";
 import Hero from '@/components/Hero/Hero'
 import Skills from '@/components/Skills/Skills'

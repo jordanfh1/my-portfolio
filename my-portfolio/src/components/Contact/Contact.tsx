@@ -1,8 +1,6 @@
 import styles from './Contact.module.css';
 
-const handleSubmit = () => {
 
-}
 
 const Contact = () => (
   <section id="contact" className={styles.contact}>
