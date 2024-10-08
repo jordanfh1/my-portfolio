@@ -1,7 +1,7 @@
 .about {
-    background-color: #181818; /* Dark background to match the modern dark theme */
-    color: #e0e0e0; /* Soft light text color for readability */
-    padding: 4rem 2rem; /* Adds breathing room */
+    background-color: #181818; 
+    color: #e0e0e0; 
+    padding: 4rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,13 +9,13 @@
   }
   
   .about div {
-    max-width: 800px; /* Prevents content from stretching too wide */
+    max-width: 800px; 
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.1); /* Soft border for subtle elegance */
+    border: 2px solid rgba(255, 255, 255, 0.1); 
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.02); /* Faint background for layered effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds depth with shadow */
-    border-radius: 15px; /* Softens the box edges */
+    background: rgba(255, 255, 255, 0.02); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    border-radius: 15px;
   }
   
   .h2 {
@@ -23,7 +23,7 @@
     margin-bottom: 1.5rem;
     color: #E0A75E; 
     text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif; /* A cool, modern, techy font */
+    font-family: 'Orbitron', sans-serif; 
     letter-spacing: 0.05em;
   }
   
