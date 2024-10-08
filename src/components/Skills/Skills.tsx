@@ -1,12 +1,20 @@
+import React from 'react';
 import styles from './Skills.module.css';
+import { SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiJest } from "react-icons/si";
+import { IoLogoVercel } from "react-icons/io5";
+import { SiNextdotjs } from "react-icons/si";
+
+
 
 
 const skills = [
-  { name: 'TypeScript', icon: `https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png`},
-  { name: 'React', icon: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png' },
-  { name: 'Jest', icon: 'https://static-00.iconduck.com/assets.00/jest-icon-1855x2048-ifiupldr.png' },
-  { name: 'Vercel', icon: 'https://smlvqzf0a1b66cku.public.blob.vercel-storage.com/images/Vercel%20Logo-IMoeV2W33gFclXzAfZxmAHqtjBuTzP.png' },
-  { name: 'Next.js', icon: 'https://images.ctfassets.net/23aumh6u8s0i/6pjUKboBuFLvCKkE3esaFA/5f2101d6d2add5c615db5e98a553fc44/nextjs.jpeg' },
+  { name: 'TypeScript', icon: <SiTypescript />},
+  { name: 'React', icon: <FaReact />},
+  { name: 'Jest', icon: <SiJest /> },
+  { name: 'Vercel', icon: <IoLogoVercel />},
+  { name: 'Next.js', icon: <SiNextdotjs />},
 ];
 
 const Skills = () => (
@@ -15,8 +23,8 @@ const Skills = () => (
       <h2>Skills</h2>
       <div className={styles.skillIcons}> 
         {skills.map(skill => (
-          <div key={skill.name} className={styles.skillIcon}>
-            <img src={skill.icon} alt={`${skill.name} icon`} />
+          <div key={skill.name}   className={styles.skillIconWrapper}>
+           <span className={styles.skillIcon}> {skill.icon}</span>
             <span className={styles.skillName}>{skill.name}</span>
           </div>
         ))}
