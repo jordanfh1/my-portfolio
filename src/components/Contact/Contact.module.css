@@ -65,16 +65,16 @@
 }
 
 .button:hover {
-  background-color: var(--color-secondary); /* Hover effect */
+  background-color: var(--color-secondary); 
 }
 
 .button:disabled {
-  background-color: #8d99ae; /* Disabled state */
+  background-color: #8d99ae; 
   cursor: not-allowed;
 }
 
 .p {
-  font-size: 1.125rem; /* Slightly larger font size */
+  font-size: 1.125rem; 
   color: #2b9348;
   text-align: center;
 }
@@ -82,6 +82,6 @@
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: var(--color-primary); /* Focus color */
-  box-shadow: 0 0 5px rgba(239, 35, 60, 0.5); /* Light shadow */
+  border-color: var(--color-primary); 
+  box-shadow: 0 0 5px rgba(239, 35, 60, 0.5);
 }
