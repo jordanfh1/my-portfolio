@@ -10,7 +10,7 @@ function ContactForm() {
       return <p>Message Sent!</p>;
   }
   return (
-          <div id="contact"><h2 className={styles.h2}>Contact</h2>
+    <div id="contact" className={styles.contact}><h2 className={styles.h2}>Contact</h2>
     <form className={styles.form} onSubmit={handleSubmit}>
       
         <label className={styles.label} htmlFor="name">
