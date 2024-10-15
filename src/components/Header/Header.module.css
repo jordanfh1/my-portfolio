@@ -1,4 +1,6 @@
-
+.white{
+  color: var(--color-text);
+}
 .header {
     position: fixed;
     top: 0;
@@ -19,9 +21,9 @@
   }
   
   .logo {
+    color: var(--color-text);
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--color-primary);
   }
   
   .navLinks {
@@ -30,6 +32,7 @@
   }
   
   .navLink {
+    color: var(--color-text);
     font-size: 1rem;
     position: relative;
   }
@@ -39,7 +42,7 @@
     display: block;
     width: 0%;
     height: 2px;
-    background: var(--color-primary);
+    background: var(--color-text);
     transition: width 0.3s;
     position: absolute;
     bottom: -5px;

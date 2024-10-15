@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1f1c2c, #973131);
+    background: linear-gradient(135deg, #1f1c2c, #6A9AB0);
     text-align: center;
     color: var(--color-text);
     position: relative;
@@ -20,7 +20,7 @@
   
   .subtitle {
     font-size: 1.5rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     animation: fadeInUp 1s ease-out;
   }
   
@@ -68,36 +68,19 @@
   @keyframes wave {
     0%, 100% {
       transform: translateY(0);
-      color: #973131; 
     }
     25% {
-      transform: translateY(-5px); 
-      color: #E0A75E; 
+      transform: translateY(-2px); 
     }
     50% {
-      transform: translateY(5px); 
-      color: #F9D689; 
+      transform: translateY(2px); 
     }
     75% {
       transform: translateY(-3px); 
-      color: #F5E7B2; 
     }
   }
   
-  @keyframes crazy-colors {
-    0%, 100% {
-      color: #F5E7B2; 
-    }
-    25% {
-      color: #F9D689; 
-    }
-    50% {
-      color: #E0A75E; 
-    }
-    75% {
-      color: #973131; 
-    }
-  }
+ 
   
   .span {
     display: inline-block;
