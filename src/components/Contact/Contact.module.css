@@ -1,88 +1,355 @@
-
-.h2 {
-  text-align: center;
-  font-size: 2rem;
+.contact {
   position: relative;
-  
+
+  padding: 140px 24px;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  overflow: hidden;
 }
 
-.h2::after {
-  content: '';
-  width: 60px;
-  height: 3px;
+.container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+/* ------------------------------
+   Heading
+------------------------------ */
+
+.heading {
+  margin-bottom: 70px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
   background: var(--color-primary);
-  display: block;
-  margin: 10px auto 0;
+
+  box-shadow: 0 0 12px rgba(76, 236, 110, 0.6);
+}
+
+.heading h2 {
+  max-width: 850px;
+
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.heading h2 span {
+  color: var(--color-text-muted);
+}
+
+.heading p {
+  max-width: 520px;
+
+  margin-top: 30px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+.formWrapper {
+  width: min(100%, 760px);
+
+  margin-left: auto;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px; 
-  margin: 3rem auto;
-  padding: 1rem;
-  background-color: #1e1e1e; 
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 36px;
+
+  border: 1px solid var(--color-border);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.01)
+    );
+
+  border-radius: var(--radius-md);
+}
+
+.field {
+  margin-bottom: 28px;
 }
 
 .label {
-  font-size: 1rem;
+  display: block;
+
+  margin-bottom: 9px;
+
   color: var(--color-text);
-  margin-bottom: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .input,
 .textarea {
+  display: block;
+
   width: 100%;
-  padding: 15px; 
-  margin-bottom: 20px;
-  border: none; 
-  border-radius: 5px;
-  background-color: #2c2c2c; 
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  background: rgba(255, 255, 255, 0.025);
+
   color: var(--color-text);
-  font-size: 1rem;
+
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input {
+  height: 52px;
+  padding: 0 15px;
 }
 
 .textarea {
-  height: 120px; 
-  resize: none;
+  min-height: 170px;
+
+  padding: 15px;
+
+  resize: vertical;
 }
 
 .input::placeholder,
 .textarea::placeholder {
-  color: #a0a0a0; 
+  color: #626b65;
 }
 
-.button {
-  padding: 15px; 
-  background-color: var(--color-primary);
-  color: #2c2c2c;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--color-secondary); 
-}
-
-.button:disabled {
-  background-color: #8d99ae; 
-  cursor: not-allowed;
-}
-
-.p {
-  font-size: 1.125rem; 
-  color: #2b9348;
-  text-align: center;
+.input:hover,
+.textarea:hover {
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: var(--color-primary); 
-  box-shadow: 0 0 5px #6A9AB0;
+
+  border-color: rgba(76, 236, 110, 0.5);
+
+  background: rgba(76, 236, 110, 0.025);
+
+  box-shadow:
+    0 0 0 3px rgba(76, 236, 110, 0.06),
+    0 0 25px rgba(76, 236, 110, 0.04);
+}
+
+/* ------------------------------
+   Submit button
+------------------------------ */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 54px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+  color: #071009;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button span:last-child {
+  font-size: 1.1rem;
+
+  transition: transform 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 30px rgba(76, 236, 110, 0.12);
+}
+
+.button:hover:not(:disabled) span:last-child {
+  transform: translate(3px, -3px);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ------------------------------
+   Form errors
+------------------------------ */
+
+.form :global(.formspree-error) {
+  margin-top: 6px;
+
+  color: #ff7676;
+
+  font-size: 0.75rem;
+}
+
+/* ------------------------------
+   Success state
+------------------------------ */
+
+.success {
+  max-width: 800px;
+
+  padding: 80px 0;
+}
+
+.successNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid var(--color-border-hover);
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  background: rgba(76, 236, 110, 0.05);
+
+  font-size: 1.2rem;
+}
+
+.success h2 {
+  margin-top: 10px;
+
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.success p {
+  max-width: 520px;
+
+  margin-top: 30px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 32px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.backButton span {
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 100px 20px;
+  }
+
+  .heading {
+    margin-bottom: 55px;
+  }
+
+  .formWrapper {
+    width: 100%;
+  }
+
+  .form {
+    padding: 26px;
+  }
+
+  .success {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 90px 20px;
+  }
+
+  .heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .success h2 {
+    font-size: 3.5rem;
+  }
 }

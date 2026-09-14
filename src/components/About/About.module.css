@@ -1,43 +1,236 @@
 .about {
-    background-color: #181818; 
-    color: #e0e0e0; 
-    padding: 4rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  position: relative;
+
+  padding: 140px 24px;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.04) 20%,
+    rgba(255, 255, 255, 0.04) 80%,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+.container {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
+
+/* ------------------------------
+   Heading
+------------------------------ */
+
+.heading {
+  margin-bottom: 80px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  box-shadow: 0 0 12px rgba(76, 236, 110, 0.6);
+}
+
+.heading h2 {
+  max-width: 900px;
+
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.heading h2 span {
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------
+   Main content
+------------------------------ */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.intro {
+  padding-top: 4px;
+}
+
+.intro p {
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+
+.story {
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.story p + p {
+  margin-top: 24px;
+}
+
+/* ------------------------------
+   Technology footer
+------------------------------ */
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 100px 0 28px;
+
+  background: var(--color-border);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footerLabel {
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.technologies span {
+  padding: 7px 11px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.technologies span:hover {
+  color: var(--color-primary);
+  border-color: var(--color-border-hover);
+  background: rgba(76, 236, 110, 0.04);
+}
+
+/* ------------------------------
+   Tablet
+------------------------------ */
+
+@media (max-width: 768px) {
+  .about {
+    padding: 100px 20px;
   }
-  
-  .about div {
-    max-width: 800px; 
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.1); 
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.02); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
-    border-radius: 15px;
+
+  .heading {
+    margin-bottom: 60px;
   }
-  
-  .h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #EAD8B1; 
-    text-transform: uppercase;
-    font-family: 'Orbitron', sans-serif; 
-    letter-spacing: 0.05em;
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  
-  .p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    font-family: 'Open Sans', sans-serif; 
-    margin-bottom: 1rem;
+
+  .intro p {
+    max-width: 650px;
   }
-  
-  
-  
-  .about div:hover {
-    background: rgba(255, 255, 255, 0.05); 
-    transition: background 0.3s ease;
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
-  
+
+  .technologies {
+    justify-content: flex-start;
+  }
+}
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 480px) {
+  .about {
+    padding: 90px 20px;
+  }
+
+  .heading h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+  }
+
+  .heading {
+    margin-bottom: 50px;
+  }
+
+  .divider {
+    margin-top: 70px;
+  }
+}

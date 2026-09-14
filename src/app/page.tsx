@@ -1,4 +1,3 @@
-import EasterEgg from "@/components/EasterEgg/EasterEgg";
 import Hero from '@/components/Hero/Hero'
 import Skills from '@/components/Skills/Skills'
 import Projects from "@/components/Projects/Projects";
@@ -15,7 +14,6 @@ export default function Home() {
     <Skills />
     <Projects />
     <Contact />
-    <EasterEgg />
     <Footer />
     </>
   );

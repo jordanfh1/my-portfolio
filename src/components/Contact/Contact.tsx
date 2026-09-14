@@ -1,69 +1,139 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
-import styles from './Contact.module.css';
+import { useForm, ValidationError } from "@formspree/react";
+import styles from "./Contact.module.css";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xdkonyvg");
+
   if (state.succeeded) {
-      return <p>Message Sent!</p>;
+    return (
+      <section id="contact" className={styles.contact}>
+        <div className={styles.container}>
+          <div className={styles.success}>
+            <span className={styles.successNumber}>✓</span>
+
+            <span className={styles.eyebrow}>Message sent</span>
+
+            <h2>
+              Thanks for
+              <br />
+              getting in touch.
+            </h2>
+
+            <p>
+              Your message has made its way through the internet and into my
+              inbox. I&apos;ll get back to you as soon as I can.
+            </p>
+
+            <a href="/" className={styles.backButton}>
+              Back to home
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    );
   }
-  return (
-    <div id="contact" className={styles.contact}><h2 className={styles.h2}>Contact</h2>
-    <form className={styles.form} onSubmit={handleSubmit}>
-      
-        <label className={styles.label} htmlFor="name">
-        Your name
-      </label>
-      <input className={styles.input}
-        id="name"
-        type="name" 
-        name="name"
-      />
-      <ValidationError 
-        prefix="Name" 
-        field="Name"
-        errors={state.errors}
-      />
 
-      <label className={styles.label} htmlFor="email">
-        Email Address
-      </label>
-      <input className={styles.input}
-        id="email"
-        type="email" 
-        name="email"
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      <label className={styles.label} htmlFor="email">
-        Your message
-      </label>
-      <textarea className={styles.textarea}
-        id="message"
-        name="message"
-      />
-      <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-      <button className={styles.button} type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form>
-    </div>
+  return (
+    <section id="contact" className={styles.contact}>
+      <div className={styles.container}>
+        <div className={styles.heading}>
+          <span className={styles.eyebrow}>04 / Contact</span>
+
+          <h2>
+            Let&apos;s build
+            <br />
+            <span>something.</span>
+          </h2>
+
+          <p>
+            Have a project in mind, want to talk software, or just fancy
+            saying hello? Send me a message.
+          </p>
+        </div>
+
+        <div className={styles.formWrapper}>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="name">
+                Your name
+              </label>
+
+              <input
+                className={styles.input}
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Jordan..."
+                required
+              />
+
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="email">
+                Email address
+              </label>
+
+              <input
+                className={styles.input}
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className={styles.field}>
+              <label className={styles.label} htmlFor="message">
+                Your message
+              </label>
+
+              <textarea
+                className={styles.textarea}
+                id="message"
+                name="message"
+                placeholder="Tell me a little about what you're working on..."
+                required
+              />
+
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+            </div>
+
+            <button
+              className={styles.button}
+              type="submit"
+              disabled={state.submitting}
+            >
+              <span>
+                {state.submitting ? "Sending..." : "Send message"}
+              </span>
+
+              {!state.submitting && <span>↗</span>}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 }
 
-function App() {
-  return (
-    <ContactForm />
-  );
-}
-
-export default App;
+export default ContactForm;
