@@ -28,7 +28,7 @@ const Header = () => (
       </div>
 
       <a href="#contact" className={styles.contactButton}>
-        Let's talk
+        Let&apos;s talk
         <span>↗</span>
       </a>
     </nav>
