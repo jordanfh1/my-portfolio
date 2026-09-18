@@ -8,7 +8,7 @@ const projects = [
     description:
       "A quote-building and business management platform designed to help tradespeople create, manage and send professional quotes.",
     technologies: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
-    link: "#",
+    link: "https://job-done-pi.vercel.app/login",
     featured: true,
   },
   {
